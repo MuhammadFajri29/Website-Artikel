@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - InfoTerkini</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar -->
+ <!-- Navbar Halaman Login -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="index.html">
+      <div class="bg-primary text-white rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+        <i class="bi bi-play-btn-fill fs-5"></i>
+      </div>
+      <span>Ani<span class="text-primary">Zone</span></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="btn btn-primary-custom active" href="login.html">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Login Form Container -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="card-title text-center mb-4">Form Login</h3>
+            
+            <!-- Tempat Pesan Alert JavaScript -->
+            <div id="alertMessage"></div>
+
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label for="email" class="form-label">Alamat Email</label>
+                <input type="email" class="form-control" id="email" placeholder="contoh@email.com">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Kata Sandi</label>
+                <input type="password" class="form-control" id="password" placeholder="Minimal 6 karakter">
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Masuk</button>
+              <p>Catatan: halaman ini hanya untuk demonstrasi validasi formulir.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <footer class="pt-5 pb-4 border-top border-secondary border-opacity-25">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <h5 class="text-white fw-bold mb-3">
+            <i class="bi bi-play-btn-fill fs-5"></i>
+         <span>Ani<span class="text-primary">Zone</span></span>
+        </h5>
+          <p class="small">AniZone adalah portal berita dan artikel anime modern yang menyajikan ulasan tepercaya, rekomendasi terbaik, serta kabar terkini seputar industri kreatif Jepang.</p>
+        </div>
+        <div class="col-6 col-lg-2 ms-auto">
+          <h6 class="text-white mb-3">Navigasi</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html">Beranda</a></li>
+            <li class="mb-2"><a href="artikel.html">Artikel</a></li>
+            <li class="mb-2"><a href="tentang.html">Tentang Kami</a></li>
+            <li class="mb-2"><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white mb-3">Ikuti Kami</h6>
+          <div class="d-flex gap-3 fs-5">
+            <a href="https://wa.me/qr/QSAERY3FY7MCH1"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/fajrisatoru?stkn=OGszNHJvb2w2MWVw"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@4xellemel?_r=1&_t=ZS-9A0CAz3MBZC"><i class="bi bi-tiktok"></i></a>
+            <a href="https://github.com/MuhammadFajri29"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary opacity-25">
+      <div class="text-center small pt-2">
+        <p class="mb-0">&copy; 2026 AniZone. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Validasi JavaScript -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Mencegah pengiriman form langsung
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const alertContainer = document.getElementById('alertMessage');
+
+      // Reset alert sebelumnya
+      alertContainer.innerHTML = '';
+
+      // Format Validasi Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      let errorMessage = '';
+
+      if (email === '' || password === '') {
+        errorMessage = 'Email dan Password wajib diisi!';
+      } else if (!emailRegex.test(email)) {
+        errorMessage = 'Format email tidak valid!';
+      } else if (password.length < 6) {
+        errorMessage = 'Password minimal harus terdiri dari 6 karakter!';
+      }
+
+      if (errorMessage !== '') {
+        // Tampilkan pesan error dengan Alert Bootstrap Danger
+        alertContainer.innerHTML = `
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            ${errorMessage}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+      } else {
+        // Tampilkan pesan sukses dengan Alert Bootstrap Success
+        alertContainer.innerHTML = `
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Login berhasil! Mengalihkan ke beranda...
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+        
+        // Reset form setelah berhasil
+        document.getElementById('loginForm').reset();
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

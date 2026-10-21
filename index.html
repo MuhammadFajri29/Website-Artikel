@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anizone - Zona Khusus Informasi Anime</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2">
+        <div class="bg-primary text-white rounded-3 p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+          <i class="bi bi-play-btn-fill fs-5"></i>
+        </div>
+        <span>Ani<span class="text-primary">Zone</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="artikel.html">Artikel</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-primary-custom" href="login.html">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Login
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section position-relative text-white text-center py-5 overflow-hidden">
+  
+  <!-- Video Background -->
+  <video autoplay loop muted playsinline class="hero-video">
+    <source src="asta5.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video HTML5.
+  </video>
+
+  <!-- Lapisan Gelap (Overlay) agar Teks Tetap Jelas Dibaca -->
+  <div class="hero-overlay"></div>
+    <div class="container position-relative z-1 py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="hero-badge mb-3">
+            <i class="bi bi-stars text-warning me-1"></i> Update Info Anime Setiap Hari
+          </span>
+          <h1 class="display-4 fw-bold mb-3">Zona Khusus Informasi Anime</h1>
+          <p class="lead text-light opacity-75 mb-4">Temukan Rekomendasi, Ulasan Mendalam, dan Rumor Anime Terbaru Hanya di AniZone."</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="artikel.html" class="btn btn-primary-custom btn-lg">
+              Mulai Membaca <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a href="tentang.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+              Tentang Kami
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content / Artikel Utama -->
+  <main class="container my-5 py-4">
+    <div class="text-center mb-5">
+      <h2 class="section-title fs-1">Artikel Utama</h2>
+      <p class="text-muted mt-2">Pilihan konten terbaik yang sedang hangat dibicarakan</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card custom-card">
+          <div class="card-img-wrapper">
+            <span class="badge bg-primary category-badge">
+              <i class="bi bi-star-fill me-1"></i>Wajib Tonton</span>
+            <img src="anime.jpg" alt="">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="text-muted small mb-2">
+              <i class="bi bi-calendar3 me-1"></i> 20 Okt 2026
+            </div>
+            <h5 class="card-title fw-bold mb-3">Anime Musim Ini yang Wajib Masuk Watchlist Kamu</h5>
+            <p class="card-text text-muted flex-grow-1">Membahas anime-anime terbaru yang sedang trending dan memiliki jalan cerita menarik di musim ini, lengkap dengan genre dan platform streaming resminya...</p>
+           <a href="detail.html#artikel-1" class="btn btn-primary btn-sm mt-auto w-100">Baca Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card custom-card">
+          <div class="card-img-wrapper">
+            <span class="badge bg-success category-badge">
+               <i class="bi bi-controller me-1"></i>Review</span>
+            <img src="solev2.jpg">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="text-muted small mb-2">
+              <i class="bi bi-calendar3 me-1"></i> 19 Okt 2026
+            </div>
+            <h5 class="card-title fw-bold mb-3">Ulasan Solo Leveling Season 2: Apakah Sesuai Ekspektasi Fans?</h5>
+            <p class="card-text text-muted flex-grow-1">Mengulas kualitas animasi, pacing cerita, pengembangan karakter, serta soundtrack dari anime blockbuster yang sedang hangat dibicarakan...</p>
+            <a href="detail.html#artikel-2" class="btn btn-primary btn-sm mt-auto w-100">Baca Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card custom-card">
+          <div class="card-img-wrapper">
+            <span class="badge bg-warning text-dark category-badge">
+               <i class="bi bi-lightbulb-fill me-1"></i>Analisis & Teori</span>
+            <img src="joyboy1.jpg" alt="Work-Life Balance">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="text-muted small mb-2">
+              <i class="bi bi-calendar3 me-1"></i> 18 Okt 2026
+            </div>
+            <h5 class="card-title fw-bold mb-3">Membahas Teori Akhir Cerita One Piece: Rahasia Besar Kekuatan Joy Boy</h5>
+            <p class="card-text text-muted flex-grow-1">Menyajikan rangkuman teori populer dari komunitas mengenai petunjuk-petunjuk penting yang mulai terungkap di arc terbaru...</p>
+            <a href="detail.html#artikel-3" class="btn btn-primary btn-sm mt-auto w-100">Baca Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-4 border-top border-secondary border-opacity-25">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <h5 class="text-white fw-bold mb-3">
+            
+            <i class="bi bi-play-btn-fill fs-5"></i>
+         <span>Ani<span class="text-primary">Zone</span></span>
+        </h5>
+          <p class="small">AniZone adalah portal berita dan artikel anime modern yang menyajikan ulasan tepercaya, rekomendasi terbaik, serta kabar terkini seputar industri kreatif Jepang.</p>
+        </div>
+        <div class="col-6 col-lg-2 ms-auto">
+          <h6 class="text-white mb-3">Navigasi</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html">Beranda</a></li>
+            <li class="mb-2"><a href="artikel.html">Artikel</a></li>
+            <li class="mb-2"><a href="tentang.html">Tentang Kami</a></li>
+            <li class="mb-2"><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white mb-3">Ikuti Kami</h6>
+          <div class="d-flex gap-3 fs-5">
+            <a href="https://wa.me/qr/QSAERY3FY7MCH1"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/fajrisatoru?stkn=OGszNHJvb2w2MWVw"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@4xellemel?_r=1&_t=ZS-9A0CAz3MBZC"><i class="bi bi-tiktok"></i></a>
+            <a href="https://github.com/MuhammadFajri29"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary opacity-25">
+      <div class="text-center small pt-2">
+        <p class="mb-0">&copy; 2026 AniZone. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
